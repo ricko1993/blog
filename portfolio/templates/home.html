@@ -2,27 +2,24 @@
 
 <header class="row bg-black">
   <div class="col-md-4">
-    <img src="{% static 'portfolio/iko-removebg-preview.png' %}" class="img-fluid m-2" alt=""/>
+    <img
+      src="{% static 'portfolio/iko-removebg-preview.png' %}"
+      class="img-fluid m-2"
+      alt=""
+    />
   </div>
   <div class="col-md-8 my-auto">
     <h1>I am <strong>Ricko Yogga</strong></h1>
     <h3>I am a <strong>Web Developer</strong></h3>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates unde
-      obcaecati nesciunt dicta repellendus repudiandae, ducimus vero fuga
-      suscipit illo libero ipsa modi adipisci corporis. Vero reprehenderit
-      architecto at adipisci modi, ab esse repellendus praesentium eligendi
-      earum optio veritatis, itaque, tenetur porro aliquid voluptatibus
-      distinctio sequi ratione voluptatem labore. Voluptatibus corporis nulla
-      rerum corrupti minus ducimus, est voluptatum ipsa id amet et repellat
-      assumenda sint mollitia? Ut saepe aliquam atque, aspernatur ea voluptate,
-      vitae molestiae tenetur excepturi perferendis laboriosam incidunt tempora,
-      ipsum iure impedit omnis quisquam expedita architecto enim minima
-      reiciendis provident nulla possimus iusto. Deleniti quaerat nisi a
-      corporis?
+      I am Ricko Yogga Prima Perdana, I graduated from Informatics Engineering
+      STMIK Bani Saleh December 2017. I have been doing Python for 1 year. I am
+      an enthusiastic Python developer who enjoys writing Pythonic code. I have
+      mastered Python Technology with Django framework and PHP with Laravel
+      framework
     </p>
     <a
-      href="{% static 'portfolio/CV RICKO YOGGA.pdf' %}"
+      href="{% static 'portfolio/RICKO_YOGGA.pdf.pdf' %}"
       class="btn btn-primary btn-lg rounded-0 my-3"
       >Download CV</a
     >
@@ -32,27 +29,32 @@
 <div class="row my-4 text-center">
   <h3>My Project</h3>
   <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eius,
-    adipisci eos distinctio illum aliquid accusamus qui nemo quas recusandae
-    corporis explicabo sunt suscipit rerum quia. Fugit nisi accusamus soluta?
+    The following are some of the portfolio projects that I have made :
   </p>
 
   {% for project in projects %}
 
   <div class="col-md-4 p-4">
-
     <div class="card bg-black card-project">
       <div class="card-body">
-        <img src="{{ project.image.url }}" alt="{{ project.title }}" class="card-img-top"/>
+        <img
+          src="{{ project.image.url }}"
+          alt="{{ project.title }}"
+          class="card-img-top"
+        />
         <h2>{{ project.title }}</h2>
         <p>{{ project.description }}</p>
 
         {% if project.url %}
-        <a href="{{ project.url }}" class="btn btn-light rounded-0 btn-sm" target="_blank">{{ project.url }}</a>
+        <a
+          href="{{ project.url }}"
+          class="btn btn-light rounded-0 btn-sm"
+          target="_blank"
+          >{{ project.url }}</a
+        >
         {% endif %}
       </div>
     </div>
-    
   </div>
 
   {% endfor %} {% endblock %}
